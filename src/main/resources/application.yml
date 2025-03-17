@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: ${SPRING_APPLICATION_NAME}
+  config:
+    import: optional:file:.env[.properties]
+
+  datasource:
+    driver-class-name: ${SPRING_DATASOURCE_DRIVER_CLASS_NAME}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    url: ${SPRING_DATASOURCE_URL}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: ${SPRING_JPA_DIALECT}
+        use_sql_comments: ${SPRING_JPA_USE_SQL_COMMENTS}
+        show_sql: ${SPRING_JPA_SHOW_SQL}
+    hibernate:
+      ddl-auto: ${SPRING_JPA_HIBERNATE_DDL_AUTO}
+
+  batch:
+    jdbc:
+      initialize-schema: always
+
+server:
+  port: ${SERVER_PORT}
