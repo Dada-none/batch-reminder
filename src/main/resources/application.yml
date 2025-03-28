@@ -14,14 +14,21 @@ spring:
     properties:
       hibernate:
         dialect: ${SPRING_JPA_DIALECT}
-        use_sql_comments: ${SPRING_JPA_USE_SQL_COMMENTS}
-        show_sql: ${SPRING_JPA_SHOW_SQL}
+#        use_sql_comments: ${SPRING_JPA_USE_SQL_COMMENTS}
+#        show_sql: ${SPRING_JPA_SHOW_SQL}
     hibernate:
       ddl-auto: ${SPRING_JPA_HIBERNATE_DDL_AUTO}
 
   batch:
     jdbc:
       initialize-schema: always
+
+weather:
+  base-url: ${WEATHER_BASE_URL}
+  service-key: ${WEATHER_SERVICE_KEY}
+  short-term:
+    api:
+      path: ${WEATHER_SHORT_TERM_API_PATH}
 
 server:
   port: ${SERVER_PORT}

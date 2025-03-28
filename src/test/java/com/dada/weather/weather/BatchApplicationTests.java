@@ -1,10 +1,10 @@
-package com.dada.weather;
+package com.dada.weather.weather;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class WeatherApplicationTests {
+class BatchApplicationTests {
 
     @Test
     void contextLoads() {
